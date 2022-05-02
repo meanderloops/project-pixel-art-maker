@@ -10,21 +10,26 @@ const pixelCanvas = document.getElementById("pixelCanvas");
 const gridSubmit = document.querySelector("input[type=submit]");
 
 gridSubmit.addEventListener('click', function makeGrid(event) {
-event.preventDefault();
-// Your code goes here!
-console.log('grid is ' + gridHeight.value + ' x ' + gridWidth.value);
 
-pixelCanvas.innerHTML = "";
-var html = ""; 
+    // Prevents default action of submission button (doesn't refresh page)
+    event.preventDefault();
 
-for(var i =0; i <= (gridHeight.value - 1); i++) { 
-    html += '<tr>'; 
-    for(var h=0; h<= (gridWidth.value - 1); h++) { 
-       html += '<td></td>'; 
-    } 
-    html += '</tr>'; 
-}
+    console.log('grid is ' + gridHeight.value + ' x ' + gridWidth.value);
 
-pixelCanvas.innerHTML += html;
+    // Clears table/canvas for new grid
+    pixelCanvas.innerHTML = "";
+    
+    // Uses values from grid size to create HTML string for table element
+    var html = "";
+    for(var i =0; i <= (gridHeight.value - 1); i++) { 
+        html += '<tr>'; 
+        for(var h=0; h<= (gridWidth.value - 1); h++) { 
+        html += '<td></td>'; 
+        } 
+        html += '</tr>'; 
+    }
+
+    // Adds new string to canvas to create new grid
+    pixelCanvas.innerHTML += html;
 
 });
