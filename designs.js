@@ -14,6 +14,7 @@ event.preventDefault();
 // Your code goes here!
 console.log('grid is ' + gridHeight.value + ' x ' + gridWidth.value);
 
+pixelCanvas.innerHTML = "";
 var html = ""; 
 
 for(var i =0; i <= (gridHeight.value - 1); i++) { 
