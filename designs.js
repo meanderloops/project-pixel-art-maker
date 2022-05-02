@@ -9,8 +9,8 @@ var gridWidth = document.getElementById("inputWidth");
 const pixelCanvas = document.getElementById("pixelCanvas");
 const gridSubmit = document.querySelector("input[type=submit]");
 
-function makeGrid() {
-
+gridSubmit.addEventListener('click', function makeGrid(event) {
+event.preventDefault();
 // Your code goes here!
 console.log('grid is ' + gridHeight.value + ' x ' + gridWidth.value);
 
@@ -26,4 +26,4 @@ for(var i =0; i <= (gridHeight.value - 1); i++) {
 
 pixelCanvas.innerHTML += html;
 
-}
+});
