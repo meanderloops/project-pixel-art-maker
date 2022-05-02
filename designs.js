@@ -24,7 +24,7 @@ gridSubmit.addEventListener('click', function makeGrid(event) {
     for(var i =0; i <= (gridHeight.value - 1); i++) { 
         html += '<tr>'; 
         for(var h=0; h<= (gridWidth.value - 1); h++) { 
-        html += '<td></td>'; 
+        html += '<td bgcolor=""></td>'; 
         } 
         html += '</tr>'; 
     }
