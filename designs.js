@@ -1,14 +1,15 @@
-// Select color input
+// Color value
 var pixelColor = document.getElementById("colorPicker");
 
-// Select size input
+// Grid size values
 var gridHeight = document.getElementById("inputHeight");
 var gridWidth = document.getElementById("inputWidth");
 
-// When size is submitted by the user, call makeGrid()
+// Variables for making canvas
 const pixelCanvas = document.getElementById("pixelCanvas");
 const gridSubmit = document.querySelector("input[type=submit]");
 
+// When size is submitted by the user, makeGrid() is called
 gridSubmit.addEventListener('click', function makeGrid(event) {
 
     // Prevents default action of submission button (doesn't refresh page)
