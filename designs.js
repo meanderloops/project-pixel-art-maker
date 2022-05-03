@@ -22,14 +22,27 @@ gridSubmit.addEventListener('click', function makeGrid(event) {
     // Uses values from grid size to create HTML string for table element
     var html = "";
     for(var i =0; i <= (gridHeight.value - 1); i++) { 
+        
         html += '<tr>'; 
+        
         for(var h=0; h<= (gridWidth.value - 1); h++) { 
-        html += '<td bgcolor=""></td>'; 
+            // Applies bgColor attribute and onClick event for changing colors
+            html += '<td bgColor="" onclick="changePixelColor(this)"></td>'; 
+        
         } 
+        
         html += '</tr>'; 
+    
     }
 
     // Adds new string to canvas to create new grid
     pixelCanvas.innerHTML += html;
 
 });
+
+// Sets grid-cell's color upon click
+function changePixelColor(pixel) {
+    
+    pixel.bgColor = pixelColor.value;
+
+}
