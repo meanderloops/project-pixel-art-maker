@@ -1,3 +1,8 @@
 # Pixel Art Maker Project
+**Version 1.0.0**
 
-My version of the pixel project that's a part of Udacity's Intro to Programming curriculum.
+A simple single-page app where the user can create pixel designs on a custom grid canvas.
+
+---
+
+Created while completing the Intro to JavaScript course from Udacity.
